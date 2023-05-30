@@ -1,0 +1,75 @@
+.movies-parent {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.movie-preview {
+  height: 8.6rem;
+  width: 15.5vw;
+  margin-right: 0.625vw;
+  background-size: cover;
+  background-position-x: center;
+}
+
+.movie-short-desc {
+  background-color: rgba(20, 20, 20, 0.85);
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  overflow: hidden;
+  display: flex;
+  align-content: flex-end;
+  flex-wrap: wrap;
+  width: calc(15.5vw - 1.2em);
+}
+
+.movie-short-desc div {
+  width: 100%;
+  padding-bottom: 0.3em;
+}
+
+.caroussel-container {
+  overflow-y: hidden;
+  width: 80vw;
+}
+
+.previous-button,
+.next-button {
+  border: 0;
+  background-color: rgb(15, 15, 15);
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: rgb(100, 100, 100);
+}
+
+.previous-button:hover,
+.next-button:hover {
+  color: white;
+}
+
+.previous-button {
+  padding-left: 0.8rem;
+  border-radius: 50% 0 0 50%;
+  transform: translateX(-100%) translateY(calc(-50% - 4.3rem));
+  float: left;
+}
+
+.next-button {
+  padding-right: 0.8rem;
+  border-radius: 0 50% 50% 0;
+  transform: translateX(100%) translateY(calc(-50% - 4.3rem));
+  float: right;
+}
+
+.previous-button:hover {
+  padding-right: 1rem;
+}
+
+.next-button:hover {
+  padding-left: 1rem;
+}

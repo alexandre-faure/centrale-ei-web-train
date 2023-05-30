@@ -7,5 +7,7 @@
 }
 
 .Layout-content {
-  padding: 20px;
+  padding: 1vw;
+  width: 80vw;
+  margin: 0 auto;
 }

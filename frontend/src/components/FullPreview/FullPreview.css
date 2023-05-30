@@ -1,0 +1,224 @@
+.full-preview {
+  width: 80vw;
+  height: 90vh;
+  background-color: rgb(40, 40, 40);
+  margin: 5vh 10vw 5vh 10vw;
+  border-radius: 5px;
+  display: flex;
+}
+
+.bkg-full-preview {
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
+.affiche-full-preview img {
+  height: 88vh;
+  margin: 1vh;
+}
+
+.affiche-full-preview {
+  display: flex;
+  align-content: center;
+}
+
+.content-full-preview {
+  padding: 0 2em;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.content-full-preview h2 {
+  font-size: 3em;
+  margin-bottom: 0em;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  background-color: rgb(40, 40, 40);
+}
+
+.date-full-preview {
+  float: right;
+}
+
+.descr-full-preview {
+  text-align: justify;
+}
+
+.descr-full-preview button {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  color: white;
+  text-decoration: underline;
+  font-style: italic;
+  cursor: pointer;
+  margin-left: 0.2em;
+  font-size: 0.9em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  transition: 0.2s;
+}
+
+.descr-full-preview button:hover {
+  color: rgb(150, 150, 150);
+}
+
+.note-full-preview {
+  text-align: left;
+}
+
+#container-bandeau-bas-full-preview {
+  position: sticky;
+  bottom: 0;
+  background-color: rgb(40, 40, 40);
+  width: 100%;
+}
+
+.bandeau-bas-full-preview {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 1rem 2rem 1rem;
+  height: 3rem;
+}
+
+#container-bandeau-bas-full-preview::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1em;
+  transform: translateY(-100%) translateX(-50%);
+  background-image: linear-gradient(
+    to top,
+    rgb(40, 40, 40),
+    rgba(40, 40, 40, 0)
+  );
+}
+
+.bandeau-bas-full-preview button {
+  cursor: pointer;
+  border: 0.1em solid rgba(180, 180, 180);
+  color: rgba(180, 180, 180);
+  border-radius: 50%;
+  width: 2.2em;
+  height: 2.2em;
+  background-color: rgb(70, 70, 70);
+  margin: 0 0.4em 0 0.4em;
+  transition: 0.2s;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.bandeau-bas-full-preview button::before {
+  content: 'Marquer comme vu';
+  position: absolute;
+  display: none;
+  background-color: rgb(240, 240, 240);
+  padding: 0.3rem 0.5rem;
+  font-size: 0.9rem;
+  transform: translateX(-50%) translateY(-100%);
+  margin-top: -1.2rem;
+  transition: 0.3s;
+  opacity: 0;
+  border-radius: 2px;
+  color: black;
+}
+
+#add-to-list::before {
+  content: 'Ajouter à ma liste';
+}
+
+#add-to-list[class='in-list']::before {
+  content: 'Retirer de ma liste';
+}
+
+#seen::before {
+  content: 'Marquer comme vu';
+}
+
+#seen[class='seen']:before {
+  content: 'Ne plus marquer comme vu';
+}
+
+#like::before {
+  content: "J'aime";
+}
+
+#like[class='like']:before,
+#dislike[class='dislike']:before {
+  content: 'Retirer mon avis';
+}
+
+#dislike:before {
+  content: "Je n'aime pas";
+}
+
+.bandeau-bas-full-preview button:hover::before {
+  display: block;
+  opacity: 1;
+}
+
+#add-to-list.in-list:hover,
+#seen.seen:hover,
+#like.like:hover,
+#dislike.dislike:hover {
+  border-color: rgba(180, 180, 180);
+  color: rgba(180, 180, 180);
+  background-color: rgb(70, 70, 70);
+}
+
+#add-to-list:hover,
+#seen:hover,
+#add-to-list.in-list,
+#seen.seen {
+  border-color: white;
+  background-color: rgb(100, 100, 230);
+  color: white;
+}
+
+#like:hover,
+#like.like {
+  border-color: rgb(135, 220, 105);
+  background-color: rgb(10, 150, 5);
+  color: rgb(219, 255, 206);
+}
+
+#dislike:hover,
+#dislike.dislike {
+  border-color: rgb(224, 141, 141);
+  background-color: rgb(203, 42, 42);
+  color: rgb(248, 227, 227);
+}
+
+#close-full-preview {
+  float: right;
+  position: sticky;
+  top: 0;
+  z-index: 15;
+  transform: translateX(2rem);
+}
+
+#close-full-preview button {
+  font-size: 2em;
+  border: 0;
+  background-color: rgb(236, 93, 93);
+  color: white;
+  cursor: pointer;
+  padding: 0.2em 0.5em;
+  border-radius: 0 0 0 5px;
+}
+
+#close-full-preview button:hover {
+  background-color: red;
+  font-size: 2.05em;
+}
+
+.icon-star_half {
+  margin-right: 0.45em;
+}
